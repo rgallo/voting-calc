@@ -1,0 +1,18 @@
+{
+  "season": "8",
+  "guideurl": "https://docs.google.com/document/d/1GDTko9PU039u5Way8tlgztP2GkB6WtycaHYg33kyRCs/edit?usp=sharing",
+  "votetypes": [
+    ["Affinity for Crows", 0.36],
+    ["Subleague Swap", 0.20],
+    ["Replacement Elbows", 0.10],
+    ["Composite", 0.10],
+    ["Who? You Too?", 0.10],
+    ["Precognition", 0.05],
+    ["Astroturf", 0.025],
+    ["Base Insticts", 0.025],
+    ["Forever Physical", 0.01],
+    ["Anti Burnout", 0.01],
+    ["Home Field Advantage", 0.01],
+    ["Barrel of Tiny Eggs", 0.01]
+  ]
+}

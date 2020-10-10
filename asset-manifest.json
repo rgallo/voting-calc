@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/voting-calc/static/css/main.5f361e03.chunk.css",
+    "main.js": "/voting-calc/static/js/main.bebaedc7.chunk.js",
+    "main.js.map": "/voting-calc/static/js/main.bebaedc7.chunk.js.map",
+    "runtime-main.js": "/voting-calc/static/js/runtime-main.a396e6c6.js",
+    "runtime-main.js.map": "/voting-calc/static/js/runtime-main.a396e6c6.js.map",
+    "static/js/2.badf955d.chunk.js": "/voting-calc/static/js/2.badf955d.chunk.js",
+    "static/js/2.badf955d.chunk.js.map": "/voting-calc/static/js/2.badf955d.chunk.js.map",
+    "index.html": "/voting-calc/index.html",
+    "precache-manifest.67928e068dd60dda0b80a947acb9aadf.js": "/voting-calc/precache-manifest.67928e068dd60dda0b80a947acb9aadf.js",
+    "service-worker.js": "/voting-calc/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/voting-calc/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.badf955d.chunk.js.LICENSE.txt": "/voting-calc/static/js/2.badf955d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/voting-calc/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a396e6c6.js",
+    "static/js/2.badf955d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.bebaedc7.chunk.js"
+  ]
+}

@@ -7,6 +7,7 @@ const App = () => {
   const [votes, setVotes] = useState(0);
   const [guideurl, setGuideURL] = useState("http://nymillennials.rocks");
   const [seasonNumber, setSeasonNumber] = useState("?");
+  const [voteTotals, setVoteTotals] = useState({});
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -25,16 +26,23 @@ const App = () => {
     loadData();
   }, [])
 
-  const getVoteTotal = (votetype, islast) => {
-    if (!islast) {
-      return Math.floor(votes * (votetype[1]));
-    }
-    let othervotes = 0;
-    for (let i = 0; i < voteTypes.length - 1; i++) {
-      othervotes += Math.floor(votes * (voteTypes[i][1]));
-    }
-    return votes - othervotes;
-  };
+  useEffect(() => {
+    let votesleft = votes;
+    let pctleft = 1.0;
+    const totals = {};
+    voteTypes.forEach(([name, pct], idx) => {
+      if (idx === voteTypes.length - 1) {
+        totals[name] = votesleft;
+      } else {
+        debugger;
+        const calculatedVotes = Math.round((pct / pctleft) * votesleft);
+        totals[name] = calculatedVotes || Math.min(votesleft, 1);
+        pctleft -= pct;
+        votesleft -= totals[name]
+      }
+    });
+    setVoteTotals(totals);
+  }, [votes, voteTypes]);
 
   const getLValue = (val) => {
     return maxL - ((maxL - minL) * val);
@@ -46,12 +54,12 @@ const App = () => {
       <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" value={votes} onChange={e => setVotes(e.target.value)} />
       <br />
       <br />
-      {voteTypes.map((votetype, idx, arr) => {
+      {voteTypes.map((votetype) => {
         return (
-          <div key={idx} className="voteType" style={{ "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
+          <div key={votetype[0]} className="voteType" style={{ "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
             {debug ?
-              `${votetype[0]}: ${getVoteTotal(votetype, idx === arr.length - 1)} votes - ${votes <= 0 ? (0).toFixed(2) : ((getVoteTotal(votetype, idx === arr.length - 1) / votes) * 100.0).toFixed(2)}%` :
-              `${votetype[0]}: ${getVoteTotal(votetype, idx === arr.length - 1)} votes`
+              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} votes - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype[0]] ?? 0) / votes) * 100.0).toFixed(2)}%` :
+              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} votes`
             }
           </div>
         );

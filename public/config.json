@@ -1,17 +1,17 @@
 {
-  "season": "9",
-  "guideurl": "https://docs.google.com/document/d/1K9Fqs57_Wh1gnUYjaE4h5KZEVL60oxW_4aaABOVjnCk/edit?usp=sharing",
+  "season": "10",
+  "guideurl": "https://docs.google.com/document/d/1VurE0FmIoiVA3hhxwybUNLMiwa-pqTYMbWj9fYDfF5M/edit?usp=sharing",
   "votetypes": [
-    ["Grab and Smash", 0.25],
-    ["Tag Team Hitting", 0.20],
-    ["Tag Team Pitching", 0.15],
-    ["Feel the Love", 0.10],
-    ["Fishing Net", 0.10],
-    ["Mutually Arising", 0.1],
-    ["Secret Weapon", 0.05],
-    ["Boatload of Tiny Eggs", 0.02],
-    ["Hot Sauce Bar", 0.01],
-    ["Dead Weight", 0.01],
-    ["New Recruit", 0.01]
+    ["People's Champions", 0.20],
+    ["Ump Cream", 0.15],
+    ["The Nut Button", 0.15],
+    ["Sealant", 0.15],
+    ["Noise-Cancelling Headphones", 0.10],
+    ["Traveling Team", 0.05],
+    ["O-No Blood Type", 0.05],
+    ["Bird Seed", 0.05],
+    ["Rogue Waves", 0.05],
+    ["Haunted", 0.025],
+    ["Sharing Signs", 0.025]
   ]
 }

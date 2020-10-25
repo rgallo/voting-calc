@@ -8,6 +8,7 @@ const App = () => {
   const [guideurl, setGuideURL] = useState("http://nymillennials.rocks");
   const [seasonNumber, setSeasonNumber] = useState("?");
   const [voteTotals, setVoteTotals] = useState({});
+  const [reverse, setReverse] = useState(false);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -20,6 +21,7 @@ const App = () => {
     setVoteTypes(configJson.votetypes);
     setGuideURL(configJson.guideurl);
     setSeasonNumber(configJson.season);
+    setReverse(configJson.reverse ?? false)
   };
 
   useEffect(() => {
@@ -51,15 +53,15 @@ const App = () => {
   return (
     <div className="container">
       <label>How many votes do you have?</label>
-      <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" value={votes} onChange={e => setVotes(e.target.value)} />
+      <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" min="0" step="1" value={votes} onChange={e => setVotes(e.target.value)} />
       <br />
       <br />
-      {voteTypes.map((votetype) => {
+      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).map((votetype) => {
         return (
           <div key={votetype[0]} className="voteType" style={{ "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
             {debug ?
-              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} votes - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype[0]] ?? 0) / votes) * 100.0).toFixed(2)}%` :
-              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} votes`
+              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"} - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype[0]] ?? 0) / votes) * 100.0).toFixed(2)}%` :
+              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"}`
             }
           </div>
         );

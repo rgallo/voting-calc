@@ -58,7 +58,7 @@ const App = () => {
       <br />
       {(reverse ? voteTypes.slice(0).reverse() : voteTypes).map((votetype) => {
         return (
-          <div key={votetype[0]} className="voteType" style={{ "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
+          <div key={votetype[0]} className="voteType" style={{ "color": votetype[1] > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
             {debug ?
               `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"} - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype[0]] ?? 0) / votes) * 100.0).toFixed(2)}%` :
               `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"}`

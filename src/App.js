@@ -9,6 +9,7 @@ const App = () => {
   const [seasonNumber, setSeasonNumber] = useState("?");
   const [voteTotals, setVoteTotals] = useState({});
   const [reverse, setReverse] = useState(false);
+  const [guideowner, setGuideOwner] = useState("our team");
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -21,7 +22,8 @@ const App = () => {
     setVoteTypes(configJson.votetypes);
     setGuideURL(configJson.guideurl);
     setSeasonNumber(configJson.season);
-    setReverse(configJson.reverse ?? false)
+    setReverse(configJson.reverse ?? false);
+    setGuideOwner(configJson.guideowner ?? "our team");
   };
 
   useEffect(() => {
@@ -67,7 +69,7 @@ const App = () => {
         );
       })}
       <br />
-    <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read Newt's awesome voting guide for Season ${seasonNumber}!`}</a></div>
+    <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>
     </div>
   )
 };

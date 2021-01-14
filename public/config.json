@@ -24,5 +24,6 @@
     ["The High Priestess", 0.00],
     ["The Magician", 0.00]
   ],
-  "reverse": true
+  "reverse": true,
+  "guideowner": "Newt"
 }

@@ -1,29 +1,15 @@
 {
-  "season": "11",
-  "guideurl": "https://docs.google.com/document/d/1NOSn42tjQXhvmxhTcYRoa_fw6n4J2Cc7TBy1sokt-pk/edit?usp=sharing",
+  "season": "12",
+  "guideurl": "https://docs.google.com/document/d/1CbOlMOpx-SAs3kPh_-Th4U-B6uEs2TMmbI_wW_hLzXg/edit?usp=sharing",
   "votetypes": [
-    ["Invest In Yourself", 1.00],
-    ["Judgement", 0.00],
-    ["The Sun", 0.00],
-    ["The Moon", 0.00],
-    ["The Star", 0.00],
-    ["The Tower", 0.00],
-    ["The Devil", 0.00],
-    ["Temperance", 0.00],
-    ["[redacted]", 0.00],
-    ["The Hanged Man", 0.00],
-    ["Strength", 0.00],
-    ["The Wheel of Fortune", 0.00],
-    ["The Hermit", 0.00],
-    ["Justice", 0.00],
-    ["The Chariot", 0.00],
-    ["The Lover", 0.00],
-    ["The Pope", 0.00],
-    ["The Emperor", 0.00],
-    ["The Empress", 0.00],
-    ["The High Priestess", 0.00],
-    ["The Magician", 0.00]
-  ],
-  "reverse": true,
-  "guideowner": "Newt"
+    ["Save Up!", 0.30],
+    ["Infuse Sandie Turner", 0.20],
+    ["Foreshadow: Charlatan Seabright with Hatfield Suzuki", 0.20],
+    ["Wind Sprints", 0.10],
+    ["The Rack", 0.05],
+    ["Tag Team Hitting", 0.05],
+    ["Tag Team Pitching", 0.05],
+    ["Summoning Circle", 0.03],
+    ["Uncle Indemnity", 0.02]
+  ]
 }

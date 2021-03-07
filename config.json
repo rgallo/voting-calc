@@ -2,13 +2,45 @@
   "season": "12",
   "guideurl": "https://docs.google.com/document/d/1CbOlMOpx-SAs3kPh_-Th4U-B6uEs2TMmbI_wW_hLzXg/edit?usp=sharing",
   "votetypes": [
-    ["Save Up!", 0.30],
-    ["Infuse Sandie Turner", 0.20],
-    ["Foreshadow: Charlatan Seabright with Hatfield Suzuki", 0.20],
-    ["Wind Sprints", 0.10],
-    ["The Rack", 0.08],
-    ["Tag Team Hitting", 0.05],
-    ["Tag Team Pitching", 0.05],
-    ["Uncle Indemnity", 0.02]
+    {
+      "label": "Save Up!",
+      "value": 0.30,
+      "includeInTotal": false
+    },
+    {
+      "label": "Infuse Sandie Turner",
+      "value": 0.20,
+      "includeInTotal": true
+    },
+    {
+      "label": "Foreshadow: Charlatan Seabright with Hatfield Suzuki",
+      "value": 0.20,
+      "includeInTotal": true
+    },
+    {
+      "label": "Wind Sprints",
+      "value": 0.10,
+      "includeInTotal": true
+    },
+    {
+      "label": "The Rack",
+      "value": 0.08,
+      "includeInTotal": true
+    },
+    {
+      "label": "Tag Team Hitting",
+      "value": 0.05,
+      "includeInTotal": true
+    },
+    {
+      "label": "Tag Team Pitching",
+      "value": 0.05,
+      "includeInTotal": true
+    },
+    {
+      "label": "Uncle Indemnity",
+      "value": 0.0,
+      "includeInTotal": true
+    }
   ]
 }

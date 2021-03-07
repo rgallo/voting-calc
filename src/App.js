@@ -8,6 +8,7 @@ const App = () => {
   const [guideurl, setGuideURL] = useState("http://nymillennials.rocks");
   const [seasonNumber, setSeasonNumber] = useState("?");
   const [voteTotals, setVoteTotals] = useState({});
+  const [votesToCast, setVotesToCast] = useState(0);
   const [reverse, setReverse] = useState(false);
   const [guideowner, setGuideOwner] = useState("our team");
   const colorH = 115;
@@ -33,19 +34,28 @@ const App = () => {
   useEffect(() => {
     let votesleft = votes;
     let pctleft = 1.0;
+    let castVotes = 0;
     const totals = {};
-    voteTypes.forEach(([name, pct], idx) => {
+    voteTypes.forEach(({label, value, includeInTotal}, idx) => {
       if (idx === voteTypes.length - 1) {
-        totals[name] = votesleft;
+        totals[label] = votesleft;
+        if (includeInTotal) {
+          castVotes += votesleft;
+        }
       } else {
         debugger;
-        const calculatedVotes = Math.round((pct / pctleft) * votesleft);
-        totals[name] = calculatedVotes || Math.min(votesleft, 1);
-        pctleft -= pct;
-        votesleft -= totals[name]
+        const calculatedVotes = Math.round((value / pctleft) * votesleft);
+        const votesToAdd = calculatedVotes || Math.min(votesleft, 1);
+        totals[label] = votesToAdd;
+        if (includeInTotal) {
+          castVotes += votesToAdd;
+        }
+        pctleft -= value;
+        votesleft -= totals[label]
       }
     });
     setVoteTotals(totals);
+    setVotesToCast(castVotes);
   }, [votes, voteTypes]);
 
   const getLValue = (val) => {
@@ -60,14 +70,16 @@ const App = () => {
       <br />
       {(reverse ? voteTypes.slice(0).reverse() : voteTypes).map((votetype) => {
         return (
-          <div key={votetype[0]} className="voteType" style={{ "color": votetype[1] > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype[1])}%)` }}>
+          <div key={votetype.label} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
             {debug ?
-              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"} - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype[0]] ?? 0) / votes) * 100.0).toFixed(2)}%` :
-              `${votetype[0]}: ${voteTotals[votetype[0]] ?? 0} vote${voteTotals[votetype[0]] === 1 ? "" : "s"}`
+              `${votetype.label}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"} - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype.label] ?? 0) / votes) * 100.0).toFixed(2)}%` :
+              `${votetype.label}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}`
             }
           </div>
         );
       })}
+      <br />
+      <div>Total Votes to Cast: {votesToCast}</div>
       <br />
     <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>
     </div>

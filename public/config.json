@@ -1,29 +1,46 @@
 {
-  "season": "11",
-  "guideurl": "https://docs.google.com/document/d/1NOSn42tjQXhvmxhTcYRoa_fw6n4J2Cc7TBy1sokt-pk/edit?usp=sharing",
+  "season": "12",
+  "guideurl": "https://docs.google.com/document/d/1CbOlMOpx-SAs3kPh_-Th4U-B6uEs2TMmbI_wW_hLzXg/edit?usp=sharing",
   "votetypes": [
-    ["Invest In Yourself", 1.00],
-    ["Judgement", 0.00],
-    ["The Sun", 0.00],
-    ["The Moon", 0.00],
-    ["The Star", 0.00],
-    ["The Tower", 0.00],
-    ["The Devil", 0.00],
-    ["Temperance", 0.00],
-    ["[redacted]", 0.00],
-    ["The Hanged Man", 0.00],
-    ["Strength", 0.00],
-    ["The Wheel of Fortune", 0.00],
-    ["The Hermit", 0.00],
-    ["Justice", 0.00],
-    ["The Chariot", 0.00],
-    ["The Lover", 0.00],
-    ["The Pope", 0.00],
-    ["The Emperor", 0.00],
-    ["The Empress", 0.00],
-    ["The High Priestess", 0.00],
-    ["The Magician", 0.00]
-  ],
-  "reverse": true,
-  "guideowner": "Newt"
+    {
+      "label": "Save Up!",
+      "value": 0.30,
+      "includeInTotal": false
+    },
+    {
+      "label": "Infuse Sandie Turner",
+      "value": 0.20,
+      "includeInTotal": true
+    },
+    {
+      "label": "Foreshadow: Charlatan Seabright with Hatfield Suzuki",
+      "value": 0.20,
+      "includeInTotal": true
+    },
+    {
+      "label": "Wind Sprints",
+      "value": 0.10,
+      "includeInTotal": true
+    },
+    {
+      "label": "The Rack",
+      "value": 0.08,
+      "includeInTotal": true
+    },
+    {
+      "label": "Tag Team Hitting",
+      "value": 0.05,
+      "includeInTotal": true
+    },
+    {
+      "label": "Tag Team Pitching",
+      "value": 0.05,
+      "includeInTotal": true
+    },
+    {
+      "label": "Uncle Indemnity",
+      "value": 0.0,
+      "includeInTotal": true
+    }
+  ]
 }

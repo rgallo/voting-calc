@@ -72,7 +72,7 @@ const App = () => {
     <div className="container">
       <label>How many votes do you have?</label>
       <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" min="0" step="1" value={votes} onChange={e => setVotes(e.target.value)} />
-      <label><input type="checkbox" checked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
+      <label className="includeWills"><input type="checkbox" checked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
       <br />
       <br />
       {(reverse ? voteTypes.slice(0).reverse() : voteTypes).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => {

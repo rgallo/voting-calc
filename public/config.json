@@ -1,52 +1,70 @@
 {
-  "season": "12",
-  "guideurl": "https://docs.google.com/document/d/1CbOlMOpx-SAs3kPh_-Th4U-B6uEs2TMmbI_wW_hLzXg/edit?usp=sharing",
+  "season": "13",
+  "guideurl": "https://docs.google.com/document/d/1C_ON8Is9Rxh2Gq3yqHKYzlBN2hWHJRSQl1PYTOAKdg0/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "Save Up!",
-      "value": 0.30,
-      "includeInTotal": false,
-      "type": "other"
-    },
-    {
-      "label": "Infuse Sandie Turner",
+      "label": "Revoke Leaf",
       "value": 0.20,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Foreshadow: Charlatan Seabright with Hatfield Suzuki",
+      "label": "Exchange NaN for Peanut Holloway on the Firefighters",
       "value": 0.20,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Wind Sprints",
-      "value": 0.10,
+      "label": "High Pressure",
+      "value": 0.45,
       "includeInTotal": true,
       "type": "blessing"
     },
     {
-      "label": "The Rack",
-      "value": 0.08,
+      "label": "Peanut Butter",
+      "value": 0.03,
       "includeInTotal": true,
       "type": "blessing"
     },
     {
-      "label": "Tag Team Hitting",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Tag Team Pitching",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Uncle Indemnity",
+      "label": "Spare Flippers",
       "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Pitching Floatation Bubble",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Hitting Floatation Bubble",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Running Floatation Bubble",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Defense Floatation Bubble",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Unholey",
+      "value": 0.01,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "Sun Dialed",
+      "value": 0.01,
       "includeInTotal": true,
       "type": "blessing"
     }

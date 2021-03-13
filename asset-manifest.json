@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/voting-calc/static/css/main.d2c808fa.chunk.css",
-    "main.js": "/voting-calc/static/js/main.81fb218a.chunk.js",
-    "main.js.map": "/voting-calc/static/js/main.81fb218a.chunk.js.map",
+    "main.css": "/voting-calc/static/css/main.dba3e387.chunk.css",
+    "main.js": "/voting-calc/static/js/main.79119f59.chunk.js",
+    "main.js.map": "/voting-calc/static/js/main.79119f59.chunk.js.map",
     "runtime-main.js": "/voting-calc/static/js/runtime-main.a396e6c6.js",
     "runtime-main.js.map": "/voting-calc/static/js/runtime-main.a396e6c6.js.map",
     "static/js/2.7ceb3722.chunk.js": "/voting-calc/static/js/2.7ceb3722.chunk.js",
     "static/js/2.7ceb3722.chunk.js.map": "/voting-calc/static/js/2.7ceb3722.chunk.js.map",
     "index.html": "/voting-calc/index.html",
-    "precache-manifest.9fe3002f5cb3913477c87673b8a6b035.js": "/voting-calc/precache-manifest.9fe3002f5cb3913477c87673b8a6b035.js",
+    "precache-manifest.32e2c1bf7c36d5161733809dd005e972.js": "/voting-calc/precache-manifest.32e2c1bf7c36d5161733809dd005e972.js",
     "service-worker.js": "/voting-calc/service-worker.js",
-    "static/css/main.d2c808fa.chunk.css.map": "/voting-calc/static/css/main.d2c808fa.chunk.css.map",
+    "static/css/main.dba3e387.chunk.css.map": "/voting-calc/static/css/main.dba3e387.chunk.css.map",
     "static/js/2.7ceb3722.chunk.js.LICENSE.txt": "/voting-calc/static/js/2.7ceb3722.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a396e6c6.js",
     "static/js/2.7ceb3722.chunk.js",
-    "static/css/main.d2c808fa.chunk.css",
-    "static/js/main.81fb218a.chunk.js"
+    "static/css/main.dba3e387.chunk.css",
+    "static/js/main.79119f59.chunk.js"
   ]
 }

@@ -11,6 +11,7 @@ const App = () => {
   const [votesToCast, setVotesToCast] = useState(0);
   const [reverse, setReverse] = useState(false);
   const [guideowner, setGuideOwner] = useState("our team");
+  const [includeWills, setIncludeWills] = useState(true);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -33,30 +34,35 @@ const App = () => {
 
   useEffect(() => {
     let votesleft = votes;
+    const totalPct = voteTypes.map(({type, value}) => (includeWills || type !== "will") ? value : 0).reduce((a, b) => a + b, 0);
     let pctleft = 1.0;
     let castVotes = 0;
     const totals = {};
-    voteTypes.forEach(({label, value, includeInTotal}, idx) => {
+    voteTypes.filter(votetype => includeWills || votetype.type !== "will").forEach(({label, value, includeInTotal, type}, idx) => {
       if (idx === voteTypes.length - 1) {
         totals[label] = votesleft;
         if (includeInTotal) {
           castVotes += votesleft;
         }
       } else {
-        debugger;
-        const calculatedVotes = Math.round((value / pctleft) * votesleft);
+        console.log(label, value);
+        const adjValue = (value * (1 / totalPct));
+        console.log(adjValue);
+        const calculatedVotes = Math.round((adjValue / pctleft) * votesleft);
+        console.log(calculatedVotes);
         const votesToAdd = calculatedVotes || Math.min(votesleft, 1);
         totals[label] = votesToAdd;
         if (includeInTotal) {
           castVotes += votesToAdd;
+          console.log("adding to total", votesToAdd);
         }
-        pctleft -= value;
+        pctleft -= adjValue;
         votesleft -= totals[label]
       }
     });
     setVoteTotals(totals);
     setVotesToCast(castVotes);
-  }, [votes, voteTypes]);
+  }, [votes, voteTypes, includeWills]);
 
   const getLValue = (val) => {
     return maxL - ((maxL - minL) * val);
@@ -66,9 +72,10 @@ const App = () => {
     <div className="container">
       <label>How many votes do you have?</label>
       <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" min="0" step="1" value={votes} onChange={e => setVotes(e.target.value)} />
+      <label><input type="checkbox" checked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
       <br />
       <br />
-      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).map((votetype) => {
+      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => {
         return (
           <div key={votetype.label} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
             {debug ?

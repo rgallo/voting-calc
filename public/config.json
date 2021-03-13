@@ -5,42 +5,50 @@
     {
       "label": "Save Up!",
       "value": 0.30,
-      "includeInTotal": false
+      "includeInTotal": false,
+      "type": "other"
     },
     {
       "label": "Infuse Sandie Turner",
       "value": 0.20,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "will"
     },
     {
       "label": "Foreshadow: Charlatan Seabright with Hatfield Suzuki",
       "value": 0.20,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "will"
     },
     {
       "label": "Wind Sprints",
       "value": 0.10,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "blessing"
     },
     {
       "label": "The Rack",
       "value": 0.08,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "blessing"
     },
     {
       "label": "Tag Team Hitting",
       "value": 0.05,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "blessing"
     },
     {
       "label": "Tag Team Pitching",
       "value": 0.05,
-      "includeInTotal": true
+      "includeInTotal": true,
+      "type": "blessing"
     },
     {
       "label": "Uncle Indemnity",
-      "value": 0.0,
-      "includeInTotal": true
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing"
     }
   ]
 }

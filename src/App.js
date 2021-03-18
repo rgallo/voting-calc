@@ -12,11 +12,14 @@ const App = () => {
   const [reverse, setReverse] = useState(false);
   const [guideowner, setGuideOwner] = useState("our team");
   const [includeWills, setIncludeWills] = useState(true);
+  const [idols, setIdols] = useState([]);
+  const [idolRandom, setIdolRandom] = useState(Math.floor(Math.random() * 100) + 1);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
   const minL = 15;
   const debug = false;
+  
 
   const loadData = async () => {
     const config = await fetch(`${process.env.PUBLIC_URL}/config.json`);
@@ -26,6 +29,7 @@ const App = () => {
     setSeasonNumber(configJson.season);
     setReverse(configJson.reverse ?? false);
     setGuideOwner(configJson.guideowner ?? "our team");
+    setIdols(configJson.idols ?? []);
   };
 
   useEffect(() => {
@@ -68,6 +72,19 @@ const App = () => {
     return maxL - ((maxL - minL) * val);
   };
 
+  const getIdolizedPlayer = () => {
+    let idol = idols[0];
+    for (let x=1; x<idols.length; x++) {
+      if (idols[x].value >= idolRandom) {
+        return idol;
+      }
+      idol = idols[x];
+    }
+    return idol;
+  };
+
+  const chosenIdol = getIdolizedPlayer();
+
   return (
     <div className="container">
       <label>How many votes do you have?</label>
@@ -87,7 +104,10 @@ const App = () => {
       })}
       <br />
       <div>Total Votes to Cast: {votesToCast}</div>
-      <br />
+      {(!!idols.length && <h2>
+        Idolize: <a href={`https://www.blaseball.com/player/${chosenIdol.id}`}>{chosenIdol.name}</a> (rolled {idolRandom})
+        </h2>)}
+    <br />
     <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>
     </div>
   )

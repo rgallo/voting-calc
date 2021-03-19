@@ -3,68 +3,14 @@
   "guideurl": "https://docs.google.com/document/d/1C_ON8Is9Rxh2Gq3yqHKYzlBN2hWHJRSQl1PYTOAKdg0/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "Revoke Leaf",
-      "value": 0.20,
+      "label": "Exchange Gaybee Docrime for the Monitor",
+      "value": 0.1,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Exchange NaN for Peanut Holloway on the Firefighters",
-      "value": 0.20,
-      "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "High Pressure",
-      "value": 0.45,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Peanut Butter",
-      "value": 0.03,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Spare Flippers",
-      "value": 0.02,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Pitching Floatation Bubble",
-      "value": 0.02,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Hitting Floatation Bubble",
-      "value": 0.02,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Running Floatation Bubble",
-      "value": 0.02,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Defense Floatation Bubble",
-      "value": 0.02,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Unholey",
-      "value": 0.01,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Sun Dialed",
-      "value": 0.01,
+      "label": "Wimd Sprints",
+      "value": 0.90,
       "includeInTotal": true,
       "type": "blessing"
     }

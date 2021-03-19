@@ -105,7 +105,7 @@ const App = () => {
       <br />
       <div>Total Votes to Cast: {votesToCast}</div>
       {(!!idols.length && <h2>
-        Idolize: <a href={`https://www.blaseball.com/player/${chosenIdol.id}`}>{chosenIdol.name}</a> (rolled {idolRandom})
+        Idolize: <a target="_blank" rel="noopener noreferrer" href={`https://www.blaseball.com/player/${chosenIdol.id}`}>{chosenIdol.name}</a> (rolled {idolRandom})
         </h2>)}
     <br />
     <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>

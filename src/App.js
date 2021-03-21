@@ -49,16 +49,12 @@ const App = () => {
           castVotes += votesleft;
         }
       } else {
-        console.log(label, value);
         const adjValue = (value * (1 / totalPct));
-        console.log(adjValue);
         const calculatedVotes = Math.round((adjValue / pctleft) * votesleft);
-        console.log(calculatedVotes);
         const votesToAdd = calculatedVotes || Math.min(votesleft, 1);
         totals[label] = votesToAdd;
         if (includeInTotal) {
           castVotes += votesToAdd;
-          console.log("adding to total", votesToAdd);
         }
         pctleft -= adjValue;
         votesleft -= totals[label]

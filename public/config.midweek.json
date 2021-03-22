@@ -1,0 +1,22 @@
+{
+  "siesta": true,
+  "votetypes": [
+    {
+      "label": "VOTING",
+      "value": 0.34,
+      "includeInTotal": true,
+      "type": "other"
+    },
+    {
+      "label": "GUIDE",
+      "value": 0.33,
+      "includeInTotal": true,
+      "type": "other"
+    },
+    {
+      "label": "SATURDAY",
+      "value": 0.33,
+      "includeInTotal": true,
+      "type": "other"
+  ]
+}

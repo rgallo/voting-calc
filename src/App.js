@@ -14,6 +14,7 @@ const App = () => {
   const [includeWills, setIncludeWills] = useState(true);
   const [idols, setIdols] = useState([]);
   const [idolRandom, setIdolRandom] = useState(Math.floor(Math.random() * 100) + 1);
+  const [siesta, setSiesta] = useState(false);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -25,11 +26,12 @@ const App = () => {
     const config = await fetch(`${process.env.PUBLIC_URL}/config.json`);
     const configJson = await config.json();
     setVoteTypes(configJson.votetypes);
-    setGuideURL(configJson.guideurl);
-    setSeasonNumber(configJson.season);
+    setGuideURL(configJson.guideurl ?? "http://nymillennials.rocks");
+    setSeasonNumber(configJson.season ?? "?");
     setReverse(configJson.reverse ?? false);
     setGuideOwner(configJson.guideowner ?? "our team");
     setIdols(configJson.idols ?? []);
+    setSiesta(configJson.siesta ?? false);
   };
 
   useEffect(() => {
@@ -104,7 +106,13 @@ const App = () => {
         Idolize: <a target="_blank" rel="noopener noreferrer" href={`https://www.blaseball.com/player/${chosenIdol.id}`}>{chosenIdol.name}</a> (rolled {idolRandom})
         </h2>)}
     <br />
-    <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>
+    {
+      siesta ? (
+        <div><span style={{"color": "red"}}>&lt;3</span>, The New York Millennials Voting Guide Team</div>
+      ) : (
+        <div>Why these picks? <a target="_blank" rel="noopener noreferrer" href={guideurl}>{`Read ${guideowner}'s awesome voting guide for Season ${seasonNumber}!`}</a></div>
+      )
+    }
     </div>
   )
 };

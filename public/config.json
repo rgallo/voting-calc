@@ -1,85 +1,17 @@
 {
-  "season": "14",
-  "guideurl": "https://docs.google.com/document/d/1zWnU6buEXHv9WlSo5hc6dimi3_DbQWmCRvQu85j7JrE/edit?usp=sharing",
+  "siesta": true,
   "votetypes": [
     {
-      "label": "Infuse Hatfield",
-      "value": 0.2,
+      "label": "SIESTA",
+      "value": 0.5,
       "includeInTotal": true,
-      "type": "will"
+      "type": "other"
     },
     {
-      "label": "Exchange Mags Banananana for Mullen Peterson on the Wild Wings",
-      "value": 0.2,
+      "label": "GO TO SLEEP",
+      "value": 0.5,
       "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "Headliners",
-      "value": 0.2,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Precognition",
-      "value": 0.15,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Non-Dominant Arms",
-      "value": 0.15,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "The Nut Button",
-      "value": 0.07,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Targeted Evolution",
-      "value": 0.03,
-      "includeInTotal": true,
-      "type": "blessing"
-    }
-  ],
-  "idols": [
-    {
-      "id": "766dfd1e-11c3-42b6-a167-9b2d568b5dc0",
-      "name": "Sandie Turner",
-      "value": 1
-    },
-    {
-      "id": "16aff709-e855-47c8-8818-b9ba66e90fe8",
-      "name": "Mullen Peterson",
-      "value": 21
-    },
-    {
-      "id": "667cb445-c288-4e62-b603-27291c1e475d",
-      "name": "Peanut Holloway",
-      "value": 41
-    },
-    {
-      "id": "9e724d9a-92a0-436e-bde1-da0b2af85d8f",
-      "name": "Hatfield Suzuki",
-      "value": 61
-    },
-    {
-      "id": "f38c5d80-093f-46eb-99d6-942aa45cd921",
-      "name": "Andrew Solis",
-      "value": 79
-    },
-    {
-      "id": "4ffd2e50-bb5b-45d0-b7c4-e24d41b2ff5d",
-      "name": "Schneider Bendie",
-      "value": 91
-    },
-    {
-      "id": "198fd9c8-cb75-482d-873e-e6b91d42a446",
-      "name": "Ren Hunter",
-      "value": 96
+      "type": "other"
     }
   ]
 }

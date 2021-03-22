@@ -1,0 +1,17 @@
+{
+  "siesta": true,
+  "votetypes": [
+    {
+      "label": "SIESTA",
+      "value": 0.5,
+      "includeInTotal": true,
+      "type": "other"
+    },
+    {
+      "label": "GO TO SLEEP",
+      "value": 0.5,
+      "includeInTotal": true,
+      "type": "other"
+    }
+  ]
+}

@@ -45,11 +45,18 @@
 			"type": "blessing"
 		},
 		{
+			"label": "Epiphany",
+			"value": 0.04,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
 			"label": "Middling",
 			"value": 0.03,
 			"includeInTotal": true,
 			"type": "blessing"
 		},
+
 		{
 			"label": "Shadow Pitching Practice",
 			"value": 0.03,

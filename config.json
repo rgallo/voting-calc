@@ -1,23 +1,66 @@
 {
-  "siesta": true,
-  "votetypes": [
-    {
-      "label": "VOTING",
-      "value": 0.34,
-      "includeInTotal": true,
-      "type": "other"
-    },
-    {
-      "label": "GUIDE",
-      "value": 0.33,
-      "includeInTotal": true,
-      "type": "other"
-    },
-    {
-      "label": "SATURDAY",
-      "value": 0.33,
-      "includeInTotal": true,
-      "type": "other"
-    }
-  ]
+	"season": 14,
+	"guideurl": "testing",
+	"votetypes": [
+		{
+			"label": "Move Winnie Mccall to Shadows Rotation ",
+			"value": 0.25,
+			"includeInTotal": true,
+			"type": "will"
+		},
+		{
+			"label": "Transfuse Felix Garbage’s Pitching",
+			"value": 0.25,
+			"includeInTotal": true,
+			"type": "will"
+		},
+		{
+			"label": "Living Single",
+			"value": 0.16,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Triple Crown",
+			"value": 0.06,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Dirty Bulk",
+			"value": 0.05,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Pitching Practice",
+			"value": 0.05,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Afterparty",
+			"value": 0.05,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Middling",
+			"value": 0.03,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Shadow Pitching Practice",
+			"value": 0.03,
+			"includeInTotal": true,
+			"type": "blessing"
+		},
+		{
+			"label": "Shadow Running Practice",
+			"value": 0.03,
+			"includeInTotal": true,
+			"type": "blessing"
+		}
+	]
 }

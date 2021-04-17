@@ -1,79 +1,48 @@
 {
-  "season": 15,
-  "guideurl": "https://docs.google.com/document/d/1uxQqwpt2uTELAdwtkNT8doEd49FrtWdvOeL1UB7Sppk/edit?usp=sharing",
+  "season": 16,
+  "guideurl": "https://docs.google.com/document/d/1qVu_aCUhvsgRbtQ643-wqLCmGk5Pjl8C0AVpf___yqg/edit",
   "votetypes": [
     {
-      "label": "Move Winnie Mccall to Shadows Rotation ",
-      "value": 0.25,
+      "label": "Foreshadow Oscar Vaughan for Chorby Short",
+      "value": 0.22,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Transfuse Felix Garbage’s Pitching",
-      "value": 0.25,
+      "label": "Equivalent Exchange Mikan Hammer for Conrad Vaughan on the Jazz Hands",
+      "value": 0.22,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Living Single",
-      "value": 0.16,
+      "label": "Transfuse Patty Fox’s Pitching",
+      "value": 0.22,
+      "includeInTotal": true,
+      "type": "will"
+    },
+    {
+      "label": "Power Chaaarge",
+      "value": 0.20,
       "includeInTotal": true,
       "type": "blessing"
     },
     {
-      "label": "Triple Crown",
-      "value": 0.06,
+      "label": "WIMDY!",
+      "value": 0.14,
       "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Dirty Bulk",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Pitching Practice",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Afterparty",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Epiphany",
-      "value": 0.04,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Middling",
-      "value": 0.03,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Shadow Pitching Practice",
-      "value": 0.03,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "Shadow Running Practice",
-      "value": 0.03,
-      "includeInTotal": true,
-      "type": "blessing"
+      "type": "wimdy"
     }
   ],
-  "idols": [
-    {
-      "id": "58c9e294-bd49-457c-883f-fb3162fc668e",
-      "name": "Kichiro Guerra",
-      "value": 1
-    }
+  "wimdys": [
+    "Supply Runs",
+    "Handcrafted Drops",
+    "Early Riser",
+    "Middle of the Pack",
+    "Fashionably Late",
+    "Posterizer",
+    "Skateboard",
+    "Fired Up",
+    "Mind Trick",
+    "Shadow Practices"
   ]
 }

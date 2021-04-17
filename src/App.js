@@ -15,6 +15,7 @@ const App = () => {
   const [idols, setIdols] = useState([]);
   const [idolRandom, setIdolRandom] = useState(Math.floor(Math.random() * 100) + 1);
   const [siesta, setSiesta] = useState(false);
+  const [wimdys, setWimdys] = useState([]);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
@@ -32,6 +33,7 @@ const App = () => {
     setGuideOwner(configJson.guideowner ?? "our team");
     setIdols(configJson.idols ?? []);
     setSiesta(configJson.siesta ?? false);
+    setWimdys(configJson.wimdys?.sort(() => Math.random() - 0.5) ?? []);
   };
 
   useEffect(() => {
@@ -83,29 +85,40 @@ const App = () => {
 
   const chosenIdol = getIdolizedPlayer();
 
+  const renderVote = votetype => {
+    const debugText = debug ? ` - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype.label] ?? 0) / votes) * 100.0).toFixed(2)}%` : "";
+    return (
+      <div key={`${votetype.label}`} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
+        {`${votetype.label + (votetype.type === "wimdy" ? " *" : "")}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}${debugText}`}
+      </div>
+    );
+  };
+
   return (
     <div className="container">
       <label>How many votes do you have?</label>
       <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" min="0" step="1" value={votes} onChange={e => setVotes(e.target.value)} />
-      <label className="includeWills"><input type="checkbox" checked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
+      <label className="includeWills"><input type="checkbox" defaultChecked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
       <br />
       <br />
-      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => {
-        return (
-          <div key={votetype.label} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
-            {debug ?
-              `${votetype.label}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"} - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype.label] ?? 0) / votes) * 100.0).toFixed(2)}%` :
-              `${votetype.label}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}`
-            }
-          </div>
-        );
-      })}
+      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => renderVote(votetype))}
       <br />
       <div>Total Votes to Cast: {votesToCast}</div>
       {(!!idols.length && <h2>
         Idolize: <a target="_blank" rel="noopener noreferrer" href={`https://www.blaseball.com/player/${chosenIdol.id}`}>{chosenIdol.name}</a> (rolled {idolRandom})
         </h2>)}
     <br />
+    { 
+      wimdys.length ? (
+      <>
+        <div>* Vote with your heart on any of the following: <br />
+        <ul>
+          {wimdys.map(wimdy => <li key={wimdy}>{wimdy}</li>)}
+        </ul>
+        </div>
+      </>
+      ) : ""
+    }
     {
       siesta ? (
         <div><span style={{"color": "red"}}>&lt;3</span>, The New York Millennials Voting Guide Team</div>

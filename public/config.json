@@ -1,23 +1,48 @@
 {
-  "siesta": true,
+  "season": 16,
+  "guideurl": "https://docs.google.com/document/d/1qVu_aCUhvsgRbtQ643-wqLCmGk5Pjl8C0AVpf___yqg/edit",
   "votetypes": [
     {
-      "label": "VOTING",
-      "value": 0.34,
+      "label": "Foreshadow Oscar Vaughan for Chorby Short",
+      "value": 0.22,
       "includeInTotal": true,
-      "type": "other"
+      "type": "will"
     },
     {
-      "label": "GUIDE",
-      "value": 0.33,
+      "label": "Equivalent Exchange Mikan Hammer for Conrad Vaughan on the Jazz Hands",
+      "value": 0.22,
       "includeInTotal": true,
-      "type": "other"
+      "type": "will"
     },
     {
-      "label": "SATURDAY",
-      "value": 0.33,
+      "label": "Transfuse Patty Fox’s Pitching",
+      "value": 0.22,
       "includeInTotal": true,
-      "type": "other"
+      "type": "will"
+    },
+    {
+      "label": "Power Chaaarge",
+      "value": 0.20,
+      "includeInTotal": true,
+      "type": "blessing"
+    },
+    {
+      "label": "WIMDY!",
+      "value": 0.14,
+      "includeInTotal": true,
+      "type": "wimdy"
     }
+  ],
+  "wimdys": [
+    "Supply Runs",
+    "Handcrafted Drops",
+    "Early Riser",
+    "Middle of the Pack",
+    "Fashionably Late",
+    "Posterizer",
+    "Skateboard",
+    "Fired Up",
+    "Mind Trick",
+    "Shadow Practices"
   ]
 }

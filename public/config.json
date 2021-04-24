@@ -1,27 +1,27 @@
 {
-  "season": 16,
-  "guideurl": "https://docs.google.com/document/d/1qVu_aCUhvsgRbtQ643-wqLCmGk5Pjl8C0AVpf___yqg/edit",
+  "season": 17,
+  "guideurl": "https://docs.google.com/document/d/1sTAq-BkZCnttEiJXHy-jFoRRwxl8sxywTATgrXprWLY/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "Foreshadow Oscar Vaughan for Chorby Short",
+      "label": "Reform Chorby Short's Unstable",
       "value": 0.22,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Equivalent Exchange Mikan Hammer for Conrad Vaughan on the Jazz Hands",
+      "label": "Move Albert Stink to the Shadows Rotation",
       "value": 0.22,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Transfuse Patty Fox’s Pitching",
+      "label": "Transfuse Greer Gwiffin's Pitching",
       "value": 0.22,
       "includeInTotal": true,
       "type": "will"
     },
     {
-      "label": "Power Chaaarge",
+      "label": "On Deck",
       "value": 0.20,
       "includeInTotal": true,
       "type": "blessing"
@@ -36,13 +36,11 @@
   "wimdys": [
     "Supply Runs",
     "Handcrafted Drops",
-    "Early Riser",
-    "Middle of the Pack",
-    "Fashionably Late",
-    "Posterizer",
-    "Skateboard",
-    "Fired Up",
-    "Mind Trick",
-    "Shadow Practices"
+    "Crate Drops",
+    "Last Not Least",
+    "Untouchable",
+    "Power Chaarge",
+    "Xenomorph",
+    "Buddies"
   ]
 }

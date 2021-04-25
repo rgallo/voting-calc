@@ -1,46 +1,23 @@
 {
-  "season": 17,
-  "guideurl": "https://docs.google.com/document/d/1sTAq-BkZCnttEiJXHy-jFoRRwxl8sxywTATgrXprWLY/edit?usp=sharing",
+  "siesta": true,
   "votetypes": [
     {
-      "label": "Reform Chorby Short's Unstable",
-      "value": 0.22,
+      "label": "VOTING",
+      "value": 0.34,
       "includeInTotal": true,
       "type": "other"
     },
     {
-      "label": "Move Albert Stink to the Shadows Rotation",
-      "value": 0.22,
+      "label": "GUIDE",
+      "value": 0.33,
       "includeInTotal": true,
       "type": "other"
     },
     {
-      "label": "Transfuse Greer Gwiffin's Pitching",
-      "value": 0.22,
+      "label": "SATURDAY",
+      "value": 0.33,
       "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "On Deck",
-      "value": 0.20,
-      "includeInTotal": true,
-      "type": "blessing"
-    },
-    {
-      "label": "WIMDY!",
-      "value": 0.14,
-      "includeInTotal": true,
-      "type": "wimdy"
+      "type": "other"
     }
-  ],
-  "wimdys": [
-    "Supply Runs",
-    "Handcrafted Drops",
-    "Crate Drops",
-    "Last Not Least",
-    "Untouchable",
-    "Power Chaarge",
-    "Xenomorph",
-    "Buddies"
   ]
 }

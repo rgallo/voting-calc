@@ -28,6 +28,8 @@ jobs:
         run: git config user.email github-actions@github.com
       - name: Check out gh-pages
         run: git checkout gh-pages
+      - name: Pull
+        run: git pull --rebase
       - name: Copy midweek file to current config
         run: cp config.midweek.json config.json
       - name: Commit change

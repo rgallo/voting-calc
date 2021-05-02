@@ -2,20 +2,14 @@
   "siesta": true,
   "votetypes": [
     {
-      "label": "VOTING",
-      "value": 0.34,
+      "label": "SIESTA",
+      "value": 0.5,
       "includeInTotal": true,
       "type": "other"
     },
     {
-      "label": "GUIDE",
-      "value": 0.33,
-      "includeInTotal": true,
-      "type": "other"
-    },
-    {
-      "label": "SATURDAY",
-      "value": 0.33,
+      "label": "GO TO SLEEP",
+      "value": 0.5,
       "includeInTotal": true,
       "type": "other"
     }

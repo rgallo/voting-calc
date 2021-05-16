@@ -1,3 +1,125 @@
+
+# Team Details
+
+Returns limited stats, player IDs, and other information for a given team ID. Limited to a single team ID.
+
+## Endpoint
+
+`https://www.blaseball.com/database/team?id=:id`
+
+## Response
+
+```json
+{
+  "season": 17,
+  "guideurl": "https://docs.google.com/document/d/1sTAq-BkZCnttEiJXHy-jFoRRwxl8sxywTATgrXprWLY/edit?usp=sharing",
+  "votetypes": [
+    {
+      "label": "Reform Chorby Short's Unstable",
+      "value": 0.22,
+      "includeInTotal": true,
+      "type": "will",
+      "order": -2
+    },
+    {
+      "label": "Move Albert Stink to the Shadows Rotation",
+      "value": 0.22,
+      "includeInTotal": true,
+      "type": "will",
+      "order": -1
+    },
+    {
+      "label": "On Deck",
+      "value": 0.21,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 2
+    },
+    {
+      "label": "Wind Sprints",
+      "value": 0.21,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 1
+    },
+    {
+      "label": "WIMDY!",
+      "value": 0.14,
+      "includeInTotal": true,
+      "type": "wimdy",
+      "order": 100
+    }
+  ],
+  "wimdys": [
+    "Supply Runs",
+    "Handcrafted Drops",
+    "Crate Drops"
+  ],
+  "idols": [
+    {
+      "id": "766dfd1e-11c3-42b6-a167-9b2d568b5dc0",
+      "name": "Sandie Turner",
+      "value": 1
+    },
+    {
+      "id": "4b3e8e9b-6de1-4840-8751-b1fb45dc5605",
+      "name": "Thomas Dracaena",
+      "value": 1
+    }
+  ]
+}
+```
+
+## Field Descriptions
+
+**`id`**: The ID of the team.
+
+**`lineup`**: The IDs of the players that belong to the team's lineup.
+
+**`rotation`**: The IDs of the players that belong to the team's pitching rotation.
+
+**`bullpen`**: The IDs of the players that belong to the team's bullpen.
+
+**`bench`**: The IDs of the players that belong to the team's bench.
+
+**`fullName`**: The full name of the team.
+
+**`location`**: The home city of the team.
+
+**`mainColor`**: The hex code of the team's primary color.
+
+**`nickname`**: The team's nickname.
+
+**`secondaryColor`**: The hex code of the team's secondary color.
+
+**`shorthand`**: The abbreviated team name.
+
+**`emoji`**: The team's emoji.
+
+**`slogan`**: The team's slogan.
+
+**`shameRuns`**: The number of runs the team has given up while shamed.
+
+**`totalShames`**: The number of times the team has been shamed across all seasons.
+
+**`totalShamings`**: The number of times the team has shamed another team across all seasons.
+
+**`seasonShames`**: The number of times the team has been shamed this season.
+
+**`seasonShamings`**: The number of times the team has shamed another team across this season.
+
+**`championships`**: The number of seasons the team has won.
+
+**`rotationSlot`**: Determines which member of the team's rotation is currently pitching.
+
+**`weekAttr`**: The IDs of attributes assigned to the team for this week.
+
+**`gameAttr`**: The IDs of attributes assigned to the team for this game.
+
+**`seasAttr`**: The IDs of attributes assigned to the team for this season.
+
+**`permAttr`**: The IDs of attributes assigned to the team permanently.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

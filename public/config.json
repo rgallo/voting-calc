@@ -1,46 +1,113 @@
 {
-  "season": 17,
-  "guideurl": "https://docs.google.com/document/d/1sTAq-BkZCnttEiJXHy-jFoRRwxl8sxywTATgrXprWLY/edit?usp=sharing",
+  "season": 18,
+  "guideurl": "https://docs.google.com/document/d/1iqjiub0KQd9ZnmGMq5MM5Sk7Ej9K8_XcvC9qrzdAcSc/edit?usp=drivesdk",
   "votetypes": [
     {
-      "label": "Reform Chorby Short's Unstable",
-      "value": 0.22,
-      "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "Move Albert Stink to the Shadows Rotation",
-      "value": 0.22,
-      "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "Transfuse Greer Gwiffin's Pitching",
-      "value": 0.22,
-      "includeInTotal": true,
-      "type": "will"
-    },
-    {
-      "label": "On Deck",
+      "label": "Move Castillo Turner to Lineup",
       "value": 0.20,
       "includeInTotal": true,
-      "type": "blessing"
+      "type": "will",
+      "order": -3
+    },
+    {
+      "label": "Alternate Trust Anathema Elemefayo",
+      "value": 0.10,
+      "includeInTotal": true,
+      "type": "will",
+      "order": -2
+    },
+    {
+      "label": "Shadow Infuse Ruslan Duran’s Defense",
+      "value": 0.10,
+      "includeInTotal": true,
+      "type": "will",
+      "order": -1
+    },
+    {
+      "label": "Fax Numbers",
+      "value": 0.12,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 10
+    },
+    {
+      "label": "A Blood Type",
+      "value": 0.10,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 4
+    },
+    {
+      "label": "Slow Build",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 5
+    },
+    {
+      "label": "Tenacity Patches",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 18
+    },
+    {
+      "label": "Shadow Cap Supply Run",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 11
+    },
+    {
+      "label": "Shadow Bat Supply Run",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 12
+    },
+    {
+      "label": "Shadow of the Bats",
+      "value": 0.04,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 9
+    },
+    {
+      "label": "Afterparty",
+      "value": 0.03,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 8
+    },
+    {
+      "label": "Skate Board",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 6
+    },
+    {
+      "label": "Quenched",
+      "value": 0.02,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 23
     },
     {
       "label": "WIMDY!",
-      "value": 0.14,
+      "value": 0.07,
       "includeInTotal": true,
-      "type": "wimdy"
+      "type": "wimdy",
+      "order": 100
     }
   ],
   "wimdys": [
-    "Supply Runs",
-    "Handcrafted Drops",
-    "Crate Drops",
-    "Last Not Least",
-    "Untouchable",
-    "Power Chaarge",
-    "Xenomorph",
-    "Buddies"
+    "Targeted Evolution",
+    "A Natural",
+    "Inexplicable",
+    "Cape of Containment",
+    "Bon Voyage",
+    "Graphene",
+    "Open Floor Plan"
   ]
 }

@@ -101,7 +101,7 @@ const App = () => {
       <label className="includeWills"><input type="checkbox" defaultChecked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
       <br />
       <br />
-      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => renderVote(votetype))}
+      {(reverse ? voteTypes.slice(0).reverse() : voteTypes).sort((a, b) => a.order - b.order).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => renderVote(votetype))}
       <br />
       <div>Total Votes to Cast: {votesToCast}</div>
       {(!!idols.length && <h2>

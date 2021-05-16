@@ -85,7 +85,7 @@
 
 >**`name`**: String, player name.
 
-**`value`**: Number, lower bound of roll, possible values are 1-100 (first in idols array should be value=1, last in array will have odds of 100-value).
+>**`value`**: Number, lower bound of roll, possible values are 1-100 (first in idols array should be value=1, last in array will have odds of 100-value).
 
 
 ### `npm start`

@@ -1,13 +1,4 @@
-
-# Team Details
-
-Returns limited stats, player IDs, and other information for a given team ID. Limited to a single team ID.
-
-## Endpoint
-
-`https://www.blaseball.com/database/team?id=:id`
-
-## Response
+## Config description
 
 ```json
 {
@@ -70,61 +61,32 @@ Returns limited stats, player IDs, and other information for a given team ID. Li
 }
 ```
 
-## Field Descriptions
+**`season`**: String, the season number, used in the bottom page text.
 
-**`id`**: The ID of the team.
+**`guideurl`**: String, the URL used as the link to the guide.
 
-**`lineup`**: The IDs of the players that belong to the team's lineup.
+**`votetypes`**: Array of objects describing vote options.
 
-**`rotation`**: The IDs of the players that belong to the team's pitching rotation.
+>**`label`**: String, name of vote option.
 
-**`bullpen`**: The IDs of the players that belong to the team's bullpen.
+>**`value`**: Number, vote percentage, decimal from 0-1.
 
-**`bench`**: The IDs of the players that belong to the team's bench.
+>**`includeInTotal`**: Boolean, true to include this vote total in the total vote count (only false for things like holding votes).
 
-**`fullName`**: The full name of the team.
+>**`type`**: String, one of: "will", "blessing", "wimdy", "other".  Will vote types can be hidden by Include Wills checkbox, Wimdy vote types show an asterisk to link to the list of wills.
 
-**`location`**: The home city of the team.
+>**`order`**: Number, used to sort display of votes.
 
-**`mainColor`**: The hex code of the team's primary color.
+**`wimdys`**: Array of strings with names of Blessing options as part of Wimdy%, randomized when displayed.
 
-**`nickname`**: The team's nickname.
+**`idols`**: Array of objects used for the random idol picker.
 
-**`secondaryColor`**: The hex code of the team's secondary color.
+>**`id`**: String, player ID, used for direct link to player page.
 
-**`shorthand`**: The abbreviated team name.
+>**`name`**: String, player name.
 
-**`emoji`**: The team's emoji.
+**`value`**: Number, lower bound of roll, possible values are 1-100 (first in idols array should be value=1, last in array will have odds of 100-value).
 
-**`slogan`**: The team's slogan.
-
-**`shameRuns`**: The number of runs the team has given up while shamed.
-
-**`totalShames`**: The number of times the team has been shamed across all seasons.
-
-**`totalShamings`**: The number of times the team has shamed another team across all seasons.
-
-**`seasonShames`**: The number of times the team has been shamed this season.
-
-**`seasonShamings`**: The number of times the team has shamed another team across this season.
-
-**`championships`**: The number of seasons the team has won.
-
-**`rotationSlot`**: Determines which member of the team's rotation is currently pitching.
-
-**`weekAttr`**: The IDs of attributes assigned to the team for this week.
-
-**`gameAttr`**: The IDs of attributes assigned to the team for this game.
-
-**`seasAttr`**: The IDs of attributes assigned to the team for this season.
-
-**`permAttr`**: The IDs of attributes assigned to the team permanently.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
@@ -134,57 +96,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run deploy`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Compile and deploy code to the gh-pages branch for use by Github Pages.

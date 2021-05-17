@@ -26,6 +26,8 @@ jobs:
         run: git config user.name github-actions
       - name: Configure Git email
         run: git config user.email github-actions@github.com
+      - name: Fetch
+        run: git fetch
       - name: Check out gh-pages
         run: git checkout gh-pages
       - name: Pull

@@ -1,113 +1,103 @@
 {
-  "season": 18,
-  "guideurl": "https://docs.google.com/document/d/1iqjiub0KQd9ZnmGMq5MM5Sk7Ej9K8_XcvC9qrzdAcSc/edit?usp=drivesdk",
+  "season": 19,
+  "guideurl": "https://docs.google.com/document/d/1eLV4wdDOU31AbHSy9B77R1mwbpZKXqZKiDhpidFtNMY/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "Move Castillo Turner to Lineup",
+      "label": "Move Greer Gwiffin to the Lineup",
       "value": 0.20,
       "includeInTotal": true,
       "type": "will",
       "order": -3
     },
     {
-      "label": "Alternate Trust Anathema Elemefayo",
-      "value": 0.10,
+      "label": "Shadow Infuse Ruslan Duran's Defense",
+      "value": 0.20,
       "includeInTotal": true,
       "type": "will",
       "order": -2
     },
     {
-      "label": "Shadow Infuse Ruslan Duran’s Defense",
-      "value": 0.10,
-      "includeInTotal": true,
-      "type": "will",
-      "order": -1
-    },
-    {
-      "label": "Fax Numbers",
-      "value": 0.12,
+      "label": "Underhanded",
+      "value": 0.13,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 10
-    },
-    {
-      "label": "A Blood Type",
-      "value": 0.10,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 4
-    },
-    {
-      "label": "Slow Build",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 5
-    },
-    {
-      "label": "Tenacity Patches",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 18
-    },
-    {
-      "label": "Shadow Cap Supply Run",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 11
-    },
-    {
-      "label": "Shadow Bat Supply Run",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 12
+      "order": 26
     },
     {
       "label": "Shadow of the Bats",
-      "value": 0.04,
+      "value": 0.05,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 9
+      "order": 13
     },
     {
-      "label": "Afterparty",
-      "value": 0.03,
+      "label": "Fax Numbers",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 14
+    },
+    {
+      "label": "Shadowrun",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 15
+    },
+    {
+      "label": "Cover Letters",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 16
+    },
+    {
+      "label": "Guarded",
+      "value": 0.04,
       "includeInTotal": true,
       "type": "blessing",
       "order": 8
     },
     {
-      "label": "Skate Board",
-      "value": 0.02,
+      "label": "Junk Baller",
+      "value": 0.03,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 6
+      "order": 17
     },
     {
-      "label": "Quenched",
-      "value": 0.02,
+      "label": "Revelations",
+      "value": 0.03,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 23
+      "order": 20
+    },
+    {
+      "label": "Moderation",
+      "value": 0.03,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 25
     },
     {
       "label": "WIMDY!",
-      "value": 0.07,
+      "value": 0.14,
       "includeInTotal": true,
       "type": "wimdy",
       "order": 100
     }
   ],
   "wimdys": [
+    "Cluttered",
+    "Batting Practice",
+    "Pitching Practice",
+    "Running Practice",
+    "Defense Practice",
     "Targeted Evolution",
-    "A Natural",
-    "Inexplicable",
-    "Cape of Containment",
-    "Bon Voyage",
-    "Graphene",
-    "Open Floor Plan"
+    "Subtractor",
+    "Go Big? Go Home",
+    "Gaudy",
+    "Walk it Off",
+    "Feast or Famine"
   ]
 }

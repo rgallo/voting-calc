@@ -1,17 +1,87 @@
 {
-  "siesta": true,
+  "season": 20,
+  "guideurl": "https://docs.google.com/document/d/18pL2NzWinzzFhd8817DgGn25tFxd7JTD1by7UAeXuY4/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "SIESTA",
-      "value": 0.5,
+      "label": "Swap Castillo Turner for Schneider Bendie",
+      "value": 0.20,
       "includeInTotal": true,
-      "type": "other"
+      "type": "will",
+      "order": -3
     },
     {
-      "label": "GO TO SLEEP",
-      "value": 0.5,
+      "label": "Equivalent Exchange Kichiro Guerra for Andrew Solis",
+      "value": 0.20,
       "includeInTotal": true,
-      "type": "other"
+      "type": "will",
+      "order": -2
+    },
+    {
+      "label": "Solo Stroll",
+      "value": 0.14,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 23
+    },
+    {
+      "label": "Couldn't Hurt",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 4
+    },
+    {
+      "label": "Backup or Down",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 17
+    },
+    {
+      "label": "Complete 180",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 18
+    },
+    {
+      "label": "Heads over Tails",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 19
+    },
+    {
+      "label": "Slow Clap",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 21
+    },
+    {
+      "label": "States of Play",
+      "value": 0.06,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 22
+    },
+    {
+      "label": "WIMDY!",
+      "value": 0.10,
+      "includeInTotal": true,
+      "type": "wimdy",
+      "order": 100
     }
+  ],
+  "wimdys": [
+    "Shots in the Dark",
+    "Light-handed",
+    "Shot Caller",
+    "Global Guts",
+    "Targeted Evolution",
+    "Stuck in the Freezer",
+    "Fringe Benefit",
+    "TWO FREAKIN BATS",
+    "Peanuts for Winnie McCall or Wesley Dudley"
   ]
 }

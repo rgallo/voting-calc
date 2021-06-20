@@ -27,6 +27,6 @@ body {
   padding-top: 2px;
 }
 
-.includeWills {
+label.option:not(:first-child), .showOptions {
   margin-left: 10px;
 }

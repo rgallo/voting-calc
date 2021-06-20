@@ -3,6 +3,26 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
+
+  const useStateWithLocalStorageBool = (localStorageKey, defaultVal) => {
+    const localStorageValue = localStorage.getItem(localStorageKey);
+    let initialStateVal;
+    if (localStorageValue === "true") {
+      initialStateVal = true;
+    } else if (localStorageValue === "false") {
+      initialStateVal = false;
+    } else {
+      initialStateVal = defaultVal;
+    }
+    const [value, setValue] = React.useState(initialStateVal);
+   
+    React.useEffect(() => {
+      localStorage.setItem(localStorageKey, value);
+    }, [localStorageKey, value]);
+   
+    return [value, setValue];
+  };
+
   const [voteTypes, setVoteTypes] = useState([["Loading...", 1.0]]);
   const [votes, setVotes] = useState(0);
   const [guideurl, setGuideURL] = useState("http://nymillennials.rocks");
@@ -11,17 +31,20 @@ const App = () => {
   const [votesToCast, setVotesToCast] = useState(0);
   const [reverse, setReverse] = useState(false);
   const [guideowner, setGuideOwner] = useState("our team");
-  const [includeWills, setIncludeWills] = useState(true);
   const [idols, setIdols] = useState([]);
   const [idolRandom, setIdolRandom] = useState(Math.floor(Math.random() * 100) + 1);
   const [siesta, setSiesta] = useState(false);
+  const [rawWimdys, setRawWimdys] = useState([]);
   const [wimdys, setWimdys] = useState([]);
   const colorH = 115;
   const colorS = 100;
   const maxL = 45;
   const minL = 15;
   const debug = false;
-  
+  const [showOptions, setShowOptions] = useState(false);
+  const [includeWills, setIncludeWills] = useStateWithLocalStorageBool("includeWills", true);
+  const [orderWimdys, setOrderWimdys] = useStateWithLocalStorageBool("orderWimdys", false);
+  const [showWimdyPct, setShowWimdyPct] = useStateWithLocalStorageBool("showWimdyPct", false);
 
   const loadData = async () => {
     const config = await fetch(`${process.env.PUBLIC_URL}/config.json`);
@@ -33,12 +56,18 @@ const App = () => {
     setGuideOwner(configJson.guideowner ?? "our team");
     setIdols(configJson.idols ?? []);
     setSiesta(configJson.siesta ?? false);
-    setWimdys(configJson.wimdys?.sort(() => Math.random() - 0.5) ?? []);
+    setRawWimdys(configJson.wimdys ?? []);
   };
 
   useEffect(() => {
     loadData();
   }, [])
+
+  useEffect(() => {
+    if (rawWimdys.length) {
+      setWimdys(orderWimdys ? rawWimdys : [...rawWimdys].sort(() => Math.random() - 0.5));
+    }
+  }, [orderWimdys, rawWimdys])
 
   useEffect(() => {
     let votesleft = votes;
@@ -87,9 +116,10 @@ const App = () => {
 
   const renderVote = votetype => {
     const debugText = debug ? ` - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype.label] ?? 0) / votes) * 100.0).toFixed(2)}%` : "";
+    const wimdyVoteSplit = (showWimdyPct && rawWimdys.length) ? ` (~${(voteTotals["WIMDY!"] / rawWimdys.length).toFixed(2)} votes each)` : "";
     return (
       <div key={`${votetype.label}`} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
-        {`${votetype.label + (votetype.type === "wimdy" ? " *" : "")}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}${debugText}`}
+        {`${votetype.label + (votetype.type === "wimdy" ? " *" : "")}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}${debugText}${votetype.type === "wimdy" ? wimdyVoteSplit : ""}`}
       </div>
     );
   };
@@ -98,8 +128,17 @@ const App = () => {
     <div className="container">
       <label>How many votes do you have?</label>
       <input id="votes" type="number" inputMode="numeric" pattern="[0-9]*" min="0" step="1" value={votes} onChange={e => setVotes(e.target.value)} />
-      <label className="includeWills"><input type="checkbox" defaultChecked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills?</label>
+      <button className="showOptions" onClick={() => setShowOptions(!showOptions)}>{showOptions ? "Hide" : "Show"} Options</button>
       <br />
+      {showOptions && (
+        <div>
+          <br />
+          <label className="option"><input type="checkbox" defaultChecked={includeWills} onClick={() => setIncludeWills(!includeWills)}/> Include Wills</label>
+          <label className="option"><input type="checkbox" defaultChecked={orderWimdys} onClick={() => setOrderWimdys(!orderWimdys)}/> Keep Wimdys In Order</label>
+          <label className="option"><input type="checkbox" defaultChecked={showWimdyPct} onClick={() => setShowWimdyPct(!showWimdyPct)}/> Show Wimdy Percentage Split</label>
+          <br />
+        </div>
+      )}
       <br />
       {(reverse ? voteTypes.slice(0).reverse() : voteTypes).sort((a, b) => a.order - b.order).filter(votetype => includeWills || votetype.type !== "will").map((votetype) => renderVote(votetype))}
       <br />

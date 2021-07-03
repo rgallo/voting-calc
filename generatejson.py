@@ -4,6 +4,10 @@ import os
 import sys
 
 
+def getBlessingKey(blessing):
+    return blessing.lower().replace(" ", "")
+
+
 def getOrderedBlessings():
     return {blessing["title"]: idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
 
@@ -45,7 +49,7 @@ def getBlessings(orderedBlessings):
         blessingname = blessingname.replace("’", "'")
         percent = handlePercent(input("Percent: "))
         blessings.append((blessingname, percent))
-    return [getVoteEntry(blessingname, percent, True, "blessing", orderedBlessings.get(blessingname, 50)+1) for blessingname, percent in blessings]
+    return [getVoteEntry(blessingname, percent, True, "blessing", orderedBlessings.get(getBlessingKey(blessingname), 50)+1) for blessingname, percent in blessings]
 
 
 def getWimdys(orderedBlessings):
@@ -56,7 +60,7 @@ def getWimdys(orderedBlessings):
             wimdys.append(wimdy.replace("’", "'"))
         else:
             break
-    return sorted(wimdys, key=lambda wimdy: orderedBlessings.get(wimdy, 50))
+    return sorted(wimdys, key=lambda wimdy: orderedBlessings.get(getBlessingKey(wimdy), 50))
 
 
 def getOther():
@@ -76,7 +80,7 @@ def main(output):
     guideurl = input("Guide URL: ")
     outputval = {"season": season, "guideurl": guideurl, "votetypes": []}
     votetypes = []
-    orderedBlessings = {blessing["title"]: idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
+    orderedBlessings = {getBlessingKey(blessing["title"]): idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
     while True:
         print("1) Wills\n2) Blessings\n3) Wimdys\n4) Other\n0) Output and Quit")
         selection = input("Make a selection: ")

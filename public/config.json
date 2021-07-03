@@ -1,87 +1,70 @@
 {
-  "season": 20,
-  "guideurl": "https://docs.google.com/document/d/18pL2NzWinzzFhd8817DgGn25tFxd7JTD1by7UAeXuY4/edit?usp=sharing",
+  "season": 22,
+  "guideurl": "https://docs.google.com/document/d/1PF7MnmY2Yfxkn1A-zWNb3jyuD0h65cU18Wv37Ml__IU/edit?usp=sharing",
   "votetypes": [
     {
-      "label": "Swap Castillo Turner for Schneider Bendie",
-      "value": 0.20,
-      "includeInTotal": true,
-      "type": "will",
-      "order": -3
-    },
-    {
-      "label": "Equivalent Exchange Kichiro Guerra for Andrew Solis (A-d-e- -olis) on the Worms",
-      "value": 0.20,
+      "label": "Reform Undertaker on Thomas Dracaena",
+      "value": 0.2,
       "includeInTotal": true,
       "type": "will",
       "order": -2
     },
     {
-      "label": "Solo Stroll",
-      "value": 0.14,
+      "label": "Equivalent Exchange Castillo Turner for Beck Whitney on the Hawai'i Fridays",
+      "value": 0.2,
       "includeInTotal": true,
-      "type": "blessing",
-      "order": 23
+      "type": "will",
+      "order": -1
     },
     {
-      "label": "Couldn't Hurt",
-      "value": 0.06,
+      "label": "Under Taker",
+      "value": 0.25,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 3
+    },
+    {
+      "label": "Subtractor Avoidance",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 7
+    },
+    {
+      "label": "Record Scratch",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 8
+    },
+    {
+      "label": "Autosave",
+      "value": 0.05,
       "includeInTotal": true,
       "type": "blessing",
       "order": 4
     },
     {
-      "label": "Backup or Down",
-      "value": 0.06,
+      "label": "Darkside Flip",
+      "value": 0.05,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 17
-    },
-    {
-      "label": "Complete 180",
-      "value": 0.06,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 18
-    },
-    {
-      "label": "Heads over Tails",
-      "value": 0.06,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 19
-    },
-    {
-      "label": "Slow Clap",
-      "value": 0.06,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 21
-    },
-    {
-      "label": "States of Play",
-      "value": 0.06,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 22
+      "order": 23
     },
     {
       "label": "WIMDY!",
-      "value": 0.10,
+      "value": 0.15,
       "includeInTotal": true,
       "type": "wimdy",
       "order": 100
     }
   ],
   "wimdys": [
-    "TWO FREAKIN BATS",
-    "Shots in the Dark",
-    "Light-handed",
-    "Fringe Benefit",
-    "Stuck in the Freezer",
-    "Shot Caller",
-    "Global Guts",
-    "Targeted Evolution",
-    "Peanuts for Winnie McCall or Wesley Dudley"
+    "Heads over Tails",
+    "Backup or Down",
+    "Lineup Flip",
+    "Rotation Flip",
+    "Roster Flip",
+    "Peanuts for Wesley Dudley, Winnie Mccall, or Mclaughlin Scorpler"
   ]
 }

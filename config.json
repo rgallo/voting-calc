@@ -3,12 +3,12 @@
   "guideurl": "http://nymillennials.rocks",
   "votetypes": [
     {
-      "label": "Incinerate Tillman Henderson (again)",
+      "label": "Team Roamless Crate",
       "value": 0.35,
       "min": 0.12,
       "max": 1.5,
       "includeInTotal": true,
-      "type": "will",
+      "type": "blessing",
       "order": -1
     },
     {

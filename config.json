@@ -4,71 +4,71 @@
   "votetypes": [
     {
       "label": "Incinerate Tillman Henderson (again)",
-      "value": 0.25,
-      "min": 0.15,
-      "max": 0.4,
+      "value": 0.35,
+      "min": 0.12,
+      "max": 0.95,
       "includeInTotal": true,
       "type": "will",
       "order": -1
     },
     {
       "label": "Season 24: Enhance",
-      "value": 0.3,
+      "value": 0.2,
       "includeInTotal": true,
       "type": "blessing",
       "order": 24
     },
     {
       "label": "Season 1: Booster Pack",
-      "value": 0.15,
+      "value": 0.12,
       "includeInTotal": true,
       "type": "blessing",
       "order": 1
     },
     {
       "label": "Season 4: Precognition",
-      "value": 0.1,
+      "value": 0.08,
       "includeInTotal": true,
       "type": "blessing",
       "order": 4
     },
     {
       "label": "Season 19: Underhanded",
-      "value": 0.1,
+      "value": 0.08,
       "includeInTotal": true,
       "type": "blessing",
       "order": 19
     },
     {
       "label": "Season 12: Uncle Indemnity",
-      "value": 0.05,
+      "value": 0.04,
       "includeInTotal": true,
       "type": "blessing",
       "order": 12
     },
     {
       "label": "Season 13: Hitting Flotation Bubble",
-      "value": 0.05,
+      "value": 0.04,
       "includeInTotal": true,
       "type": "blessing",
       "order": 13
     },
     {
       "label": "WIMDY!",
-      "value": 0.1,
+      "value": 0.09,
       "includeInTotal": true,
       "type": "wimdy",
       "order": 100
     }
   ],
   "wimdys": [
-    "Season 14: Targeted Evolution",
-    "Season 15: Afterparty",
-    "Season 10: Divisional Walk in the Park",
-    "Season 16: Skate Board",
-    "Season 18: Cape of Containment",
+    "Season 2: Literal Arm Cannon",
     "Season 5: Fireproof Jacket",
     "Season 7: Iffey Jr.",
-    "Season 2: Literal Arm Cannon"
+    "Season 10: Divisional Walk in the Park",
+    "Season 14: Targeted Evolution",
+    "Season 15: Afterparty",
+    "Season 16: Skate Board",
+    "Season 18: Cape of Containment"
   ]
 }

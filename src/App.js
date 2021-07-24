@@ -40,7 +40,7 @@ const App = () => {
   const colorS = 100;
   const maxL = 45;
   const minL = 15;
-  const debug = false;
+  const debug = true;
   const [showOptions, setShowOptions] = useState(false);
   const [includeWills, setIncludeWills] = useStateWithLocalStorageBool("includeWills", true);
   const [orderWimdys, setOrderWimdys] = useStateWithLocalStorageBool("orderWimdys", false);
@@ -71,7 +71,7 @@ const App = () => {
 
   useEffect(() => {
     let votesleft = votes;
-    const totalPct = voteTypes.map(({type, value}) => (includeWills || type !== "will") ? value : 0).reduce((a, b) => a + b, 0);
+    const totalPct = voteTypes.map(({type, value}) => (includeWills || type !== "will") ? parseFloat(value) : 0).reduce((a, b) => a + b, 0);
     let pctleft = 1.0;
     let castVotes = 0;
     const totals = {};
@@ -82,7 +82,7 @@ const App = () => {
           castVotes += votesleft;
         }
       } else {
-        const adjValue = (value * (1 / totalPct));
+        const adjValue = (parseFloat(value) * (1 / totalPct));
         const calculatedVotes = Math.round((adjValue / pctleft) * votesleft);
         const votesToAdd = calculatedVotes || Math.min(votesleft, 1);
         totals[label] = votesToAdd;
@@ -114,12 +114,28 @@ const App = () => {
 
   const chosenIdol = getIdolizedPlayer();
 
+  const changeValue = (votetype, newvalue) => {
+    const newVoteTypes = [];
+    voteTypes.forEach(newVoteType => {
+      if (newVoteType.label === votetype.label) {
+        const voteTypeCopy = {...newVoteType};
+        voteTypeCopy.value = newvalue;
+        newVoteTypes.push(voteTypeCopy)
+      } else {
+        newVoteTypes.push(newVoteType);
+      }
+    });
+    setVoteTypes(newVoteTypes);
+  }
+
   const renderVote = votetype => {
     const debugText = debug ? ` - ${votes <= 0 ? (0).toFixed(2) : (((voteTotals[votetype.label] ?? 0) / votes) * 100.0).toFixed(2)}%` : "";
     const wimdyVoteSplit = (showWimdyPct && rawWimdys.length) ? ` (~${(voteTotals["WIMDY!"] / rawWimdys.length).toFixed(2)} votes each)` : "";
+    const slider = (votetype.min ? <input type="range" style={{"marginLeft": "10px"}} min={votetype.min} max={votetype.max} value={votetype.value} step="0.01" onChange={e => changeValue(votetype, e.target.value)} /> : null);
     return (
       <div key={`${votetype.label}`} className="voteType" style={{ "color": votetype.value > .8 ? "white": "black", "backgroundColor": `hsl(${colorH}, ${colorS}%, ${getLValue(votetype.value)}%)` }}>
         {`${votetype.label + (votetype.type === "wimdy" ? " *" : "")}: ${voteTotals[votetype.label] ?? 0} vote${voteTotals[votetype.label] === 1 ? "" : "s"}${debugText}${votetype.type === "wimdy" ? wimdyVoteSplit : ""}`}
+        {slider}
       </div>
     );
   };

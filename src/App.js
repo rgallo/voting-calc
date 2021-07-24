@@ -40,7 +40,7 @@ const App = () => {
   const colorS = 100;
   const maxL = 45;
   const minL = 15;
-  const debug = true;
+  const debug = false;
   const [showOptions, setShowOptions] = useState(false);
   const [includeWills, setIncludeWills] = useStateWithLocalStorageBool("includeWills", true);
   const [orderWimdys, setOrderWimdys] = useStateWithLocalStorageBool("orderWimdys", false);

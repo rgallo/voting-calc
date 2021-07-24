@@ -1,70 +1,74 @@
 {
-  "season": 22,
-  "guideurl": "https://docs.google.com/document/d/1PF7MnmY2Yfxkn1A-zWNb3jyuD0h65cU18Wv37Ml__IU/edit?usp=sharing",
+  "season": 23,
+  "guideurl": "http://nymillennials.rocks",
   "votetypes": [
     {
-      "label": "Reform Undertaker on Thomas Dracaena",
-      "value": 0.2,
-      "includeInTotal": true,
-      "type": "will",
-      "order": -2
-    },
-    {
-      "label": "Equivalent Exchange Castillo Turner for Beck Whitney on the Hawai'i Fridays",
-      "value": 0.2,
+      "label": "Incinerate Tillman Henderson (again)",
+      "value": 0.25,
+      "min": 0.15,
+      "max": 0.4,
       "includeInTotal": true,
       "type": "will",
       "order": -1
     },
     {
-      "label": "Under Taker",
-      "value": 0.25,
+      "label": "Season 24: Enhance",
+      "value": 0.3,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 3
+      "order": 24
     },
     {
-      "label": "Subtractor Avoidance",
-      "value": 0.05,
+      "label": "Season 1: Booster Pack",
+      "value": 0.15,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 7
+      "order": 1
     },
     {
-      "label": "Record Scratch",
-      "value": 0.05,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 8
-    },
-    {
-      "label": "Autosave",
-      "value": 0.05,
+      "label": "Season 4: Precognition",
+      "value": 0.1,
       "includeInTotal": true,
       "type": "blessing",
       "order": 4
     },
     {
-      "label": "Darkside Flip",
+      "label": "Season 19: Underhanded",
+      "value": 0.1,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 19
+    },
+    {
+      "label": "Season 12: Uncle Indemnity",
       "value": 0.05,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 23
+      "order": 12
+    },
+    {
+      "label": "Season 13: Hitting Flotation Bubble",
+      "value": 0.05,
+      "includeInTotal": true,
+      "type": "blessing",
+      "order": 13
     },
     {
       "label": "WIMDY!",
-      "value": 0.15,
+      "value": 0.1,
       "includeInTotal": true,
       "type": "wimdy",
       "order": 100
     }
   ],
   "wimdys": [
-    "Heads over Tails",
-    "Backup or Down",
-    "Lineup Flip",
-    "Rotation Flip",
-    "Roster Flip",
-    "Peanuts for Wesley Dudley, Winnie Mccall, or Mclaughlin Scorpler"
+    "Season 14: Targeted Evolution",
+    "Season 15: Afterparty",
+    "Season 10: Divisional Walk in the Park",
+    "Season 16: Skate Board",
+    "Season 18: Cape of Containment",
+    "Season 5: Fireproof Jacket",
+    "Season 7: Iffey Jr.",
+    "Season 2: Literal Arm Cannon"
   ]
 }

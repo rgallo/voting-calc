@@ -147,6 +147,9 @@ const App = () => {
   };
 
   const renderVote = (votetype) => {
+    const wimdyLabel = voteTypes.filter(
+      (votetype) => votetype.type === "wimdy"
+    )[0]?.label;
     const debugText = debug
       ? ` - ${
           votes <= 0
@@ -156,7 +159,7 @@ const App = () => {
       : "";
     const wimdyVoteSplit =
       showWimdyPct && rawWimdys.length
-        ? ` (~${(voteTotals["WIMDY!"] / rawWimdys.length).toFixed(
+        ? ` (~${(voteTotals[wimdyLabel] / rawWimdys.length).toFixed(
             2
           )} votes each)`
         : "";

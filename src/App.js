@@ -96,7 +96,7 @@ const App = () => {
       .forEach(({ label, value, includeInTotal, type }, idx) => {
         if (idx === voteTypes.length - 1) {
           totals[label] = votesleft;
-          if (includeInTotal) {
+          if (includeInTotal || includeInTotal === undefined) {
             castVotes += votesleft;
           }
         } else {
@@ -104,7 +104,7 @@ const App = () => {
           const calculatedVotes = Math.round((adjValue / pctleft) * votesleft);
           const votesToAdd = calculatedVotes || Math.min(votesleft, 1);
           totals[label] = votesToAdd;
-          if (includeInTotal) {
+          if (includeInTotal || includeInTotal === undefined) {
             castVotes += votesToAdd;
           }
           pctleft -= adjValue;

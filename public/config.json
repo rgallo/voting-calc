@@ -1,74 +1,80 @@
 {
-  "season": 23,
-  "guideurl": "https://docs.google.com/document/d/1ZU0b857zl8lC34QuHfgkPnWpWR7o0nhcC2n_Xs_pghY/edit?usp=sharing",
+  "season": 1,
+  "guideurl": "https://at.tumblr.com/nymills/trending-blessings-that-are-good-new-team-boost/l0j8hp54bgkj",
   "votetypes": [
     {
-      "label": "Team Roamless Crate",
-      "value": 0.35,
-      "min": 0.12,
-      "max": 1.5,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": -1
-    },
-    {
-      "label": "Season 24: Enhance",
-      "value": 0.2,
-      "includeInTotal": true,
-      "type": "blessing",
-      "order": 24
-    },
-    {
-      "label": "Season 1: Booster Pack",
-      "value": 0.12,
-      "includeInTotal": true,
+      "label": "NEW Team Boost",
+      "value": 0.1,
       "type": "blessing",
       "order": 1
     },
     {
-      "label": "Season 4: Precognition",
-      "value": 0.08,
-      "includeInTotal": true,
+      "label": "NEW Batting Boost",
+      "value": 0.1,
+      "type": "blessing",
+      "order": 2
+    },
+    {
+      "label": "NEW Pitching Boost",
+      "value": 0.1,
+      "type": "blessing",
+      "order": 3
+    },
+    {
+      "label": "NEW Max Out Pitcher",
+      "value": 0.1,
       "type": "blessing",
       "order": 4
     },
     {
-      "label": "Season 19: Underhanded",
-      "value": 0.08,
-      "includeInTotal": true,
+      "label": "NEW Max Out Batter",
+      "value": 0.1,
       "type": "blessing",
-      "order": 19
+      "order": 5
     },
     {
-      "label": "Season 12: Uncle Indemnity",
-      "value": 0.04,
+      "label": "NEW Steal Best Pitcher",
+      "value": 0.1,
       "includeInTotal": true,
       "type": "blessing",
-      "order": 12
+      "order": 6
     },
     {
-      "label": "Season 13: Hitting Flotation Bubble",
-      "value": 0.04,
-      "includeInTotal": true,
+      "label": "NEW Steal Best Batter",
+      "value": 0.1,
       "type": "blessing",
-      "order": 13
+      "order": 7
     },
     {
-      "label": "WIMDY!",
+      "label": "Guess Whose Thwack",
+      "value": 0.1,
+      "type": "blessing",
+      "order": 8
+    },
+    {
+      "label": "Yeet",
+      "value": 0.1,
+      "type": "blessing",
+      "order": 9
+    },
+    {
+      "label": "Muted",
       "value": 0.09,
-      "includeInTotal": true,
       "type": "wimdy",
       "order": 100
+    },
+    {
+      "label": "Wind Sprints (WIMDY)",
+      "value": 0.01,
+      "type": "blessing",
+      "order": 101
     }
   ],
   "wimdys": [
-    "Season 2: Literal Arm Cannon",
-    "Season 5: Fireproof Jacket",
-    "Season 7: Iffey Jr.",
-    "Season 10: Divisional Walk in the Park",
-    "Season 14: Targeted Evolution",
-    "Season 15: Afterparty",
-    "Season 16: Skate Board",
-    "Season 18: Cape of Containment"
+    "NEW Randomize Players",
+    "Strong Start",
+    "Strike Zero",
+    "Shadow Play",
+    "Shore Up"
   ]
 }

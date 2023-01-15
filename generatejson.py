@@ -8,10 +8,6 @@ def getBlessingKey(blessing):
     return blessing.lower().replace(" ", "")
 
 
-def getOrderedBlessings():
-    return {blessing["title"]: idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
-
-
 def handlePercent(val):
     floatval = float(val)
     if floatval > 1.0:
@@ -80,7 +76,10 @@ def main(output):
     guideurl = input("Guide URL: ")
     outputval = {"season": season, "guideurl": guideurl, "votetypes": []}
     votetypes = []
-    orderedBlessings = {getBlessingKey(blessing["title"]): idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
+    try:
+        orderedBlessings = {getBlessingKey(blessing["title"]): idx for idx, blessing in enumerate(requests.get("https://www.blaseball.com/database/offseasonSetup").json()["blessings"])}
+    except requests.exceptions.JSONDecodeError:
+        orderedBlessings = {}
     while True:
         print("1) Wills\n2) Blessings\n3) Wimdys\n4) Other\n0) Output and Quit")
         selection = input("Make a selection: ")
@@ -89,8 +88,9 @@ def main(output):
         if selection == "2":
             votetypes.extend(getBlessings(orderedBlessings))
         if selection == "3":
+            wimdyname = input("Wimdy label (default 'WIMDY!'): ") or "WIMDY!"
             wimdypct = handlePercent(input("Wimdy percent: "))
-            votetypes.append(getVoteEntry("WIMDY!", wimdypct, True, "wimdy", 100))
+            votetypes.append(getVoteEntry(wimdyname, wimdypct, True, "wimdy", 100))
             outputval["wimdys"] = getWimdys(orderedBlessings)
         if selection == "4":
             votetypes.extend(getOther())
